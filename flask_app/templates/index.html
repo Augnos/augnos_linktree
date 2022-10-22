@@ -22,7 +22,7 @@
         color: #cccccc;
     }
 
-    #vaporwave {
+    .text-vaporwave {
         color: #ff71ce
     }
 
@@ -41,9 +41,8 @@
 
             <!-- Header -->
             <div class="row mx-auto">
-                <h1 class="text-center fw-lighter">Augnos</h1>
-                <p id="subtitle" class="text-center font-monospace fw-light">Photography. Music. <span
-                        id="vaporwave">Vaporwave</span>.</p>
+                <h1 class="text-center text-white fw-lighter">Augnos</h1>
+                <p id="subtitle" class="text-center font-monospace">Photography. Music. <span class="text-vaporwave">Vaporwave</span>.</p>
             </div>
 
             <!-- Social Icons -->
@@ -66,13 +65,22 @@
                 </a>
             </div>
 
+            <!-- Yoi Toki SF Photos -->
+            <a href="https://www.facebook.com/media/set?vanity=YoiTokiEvents&set=a.135359642593638"
+                target="_blank" rel="noopener noreferrer"
+                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
+                style="--bs-bg-opacity: .65;">
+                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/yoi_toki_sf.jpg') }}" alt="A group of cool people in light-up shutter glasses on stage at Yoi Toki San Francisco ">
+                <div class="col-9"><span class="text-vaporwave fw-bold">PHOTOS</span>: Yoi Toki SF, Oct 15, 2022</div>
+            </a>
+
             <!-- Vaporspace Invaders Photos -->
             <a href="https://drive.google.com/drive/folders/1-m_YInfIPL2Qf9LaimCmXEHibRIjiiQL?usp=sharing"
                 target="_blank" rel="noopener noreferrer"
                 class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
                 style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/eye_click.jpg') }}" alt="eye click photo">
-                <div class="col-9">Vaporspace: Invaders Photos</div>
+                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/eye_click.jpg') }}" alt="Eye Click meme photo from VaporSpace: Invaders in Brooklyn, New York">
+                <div class="col-9"><span class="text-vaporwave fw-bold">PHOTOS</span>: VaporSpace: Invaders, Aug 21, 2022</div>
             </a>
 
             <!-- Electronicon 3 Photos -->
@@ -80,8 +88,8 @@
                 target="_blank" rel="noopener noreferrer"
                 class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
                 style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/marble.jpg') }}" alt="fm skyline marble">
-                <div class="col-9">ElectroniCON 3 Photos</div>
+                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/marble.jpg') }}" alt="Reflective marble ballon floating over crowd at FM Skyline's set at ElectroniCON 3">
+                <div class="col-9"><span class="text-vaporwave fw-bold">PHOTOS</span>: ElectroniCON 3, Aug 20, 2022</div>
             </a>
 
             <!-- Tape Swap 3 Photos -->
@@ -89,8 +97,8 @@
                 target="_blank" rel="noopener noreferrer"
                 class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
                 style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/george_and_indy.jpg') }}" alt="george clanton and indy advant">
-                <div class="col-9">Vaporwave Tape Swap 3 Photos</div>
+                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/george_and_indy.jpg') }}" alt="George Clanton and Indy Advant posing for a photo at the Vaporwave Tape Swap 3">
+                <div class="col-9"><span class="text-vaporwave fw-bold">PHOTOS</span>: Vaporwave Tape Swap 3, Aug 19, 2022</div>
             </a>
 
         </div>
