@@ -2,12 +2,8 @@
 
 Technologies used: Python, Flask, HTML5, CSS3, Bootstrap, AWS EC2. 
 
-My first deployed website, a Linktree-style clone built with Python and Flask, and deployed to an AWS EC2 instance.
+This application was created as a clone of a Linktree repository. Linktrees are used for social media profiles where typically only 1 link is allowed to be presented, such as Twitter and Instagram. Linktrees get around that limitation by presenting a simple website that hosts multiple important links for the user to share with visitors.
 
-The purpose of this project was creating an actual website I will use and continually update. As a freelancer, I will continue to add new links to photo albums from concerts and parties I photograph, music events I'll be promoting and/or performing at, and any other valuable links involving my involvement in the music scene.
+This was my first application, and I'm actively using it to this day. My brand, Augnos, revolves around music and photography, and I update my "Linktree clone" regularly with photos and shows.
 
-The other purpose of this project was to use a simple app to learn how to deploy projects to AWS EC2. I cloned this repo to the instance, and will add and update links indefinitel.
-
-Challenges with this project included getting the site online as a Flask app instead of just an HTML page and some images. Another challenge was creating and directing a subdomain to my server instance. Lastly acquiring and installing SSL certification was the final challenge, and I was able to obtain a certificate and properly configure NGINX to handle the traffic to HTTPS.
-
-Deploying to AWS was more challenging than I anticipated, but has paved the way for other deployments to go a lot more smoothly. I've been able to even help some of my cohortmates with their own deployments and acquiring SSL certificates for their own projects.
+As the first application I'd complete, I wanted to build something I would actually use, while also learning how to deploy and update a web application to be viewed anywhere on the internet. Building this app introduced me to working with Amazon Web Services, EC2 instances, SSL Certificates, and web servers like NGINX.
