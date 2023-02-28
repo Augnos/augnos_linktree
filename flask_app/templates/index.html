@@ -71,7 +71,7 @@
 
 <body class="text-light">
     <div class="container-fluid pt-3">
-        <div class="col-xxl-4 col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 mx-auto">
+        <div class="col-xxl-4 col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 mx-auto mb-3">
 
             <!-- Header -->
             <div class="row mx-auto">
@@ -110,119 +110,96 @@
             <!-- ********* Links ******* -->
             <!-- vvvvvvvvvvvvvvvvvvvvvvv -->
 
-            <!-- Template for link component
+            <!-- Template for link partial
                 {{ _partials.link(
                     "Type e.g PHOTO",
                     "Title",
                     "Venue, City, State",
                     "Month DD, YYYY",
                     "link URL",
-                    "thumbnail URL"
+                    "thumbnail URL",
+                    "thumbnail alt-text"
                 )}} 
             -->
 
             <!-- FrankJavCee Birthday, 02/24/23 -->
             {{ _partials.link(
-                "PHOTO",
+                "📸 PHOTOS",
                 "FrankJavCee's Birthday Party",
-                "VAlley Relics Museum, VAn Nuys, CA",
+                "Valley Relics Museum, Van Nuys, CA",
                 "February 24, 2023",
                 "https://www.facebook.com/media/set/?set=a.168268832636052&type=3",
-                "images/yoi_toki_sf_2.jpg"
+                "images/fjc_birthday.jpg",
+                "Neon lights shining on a vaporwave party in the Valley Relics Museum"
             )}}
 
             <!-- Yoi Toki SF Photos, 02/11/23 -->
             {{ _partials.link(
-                "PHOTO",
+                "📸 PHOTOS",
                 "Yoi Toki",
-                "San Francisco, CA",
+                "Rickshaw Stop, San Francisco, CA",
                 "February 11, 2023",
                 "https://www.facebook.com/media/set/?set=a.168268832636052&type=3",
-                "images/yoi_toki_sf_2.jpg"
+                "images/yoi_toki_sf_2.jpg",
+                "A nightclub portrait of a woman looking back and giving a peace sign on stage at Rickshaw Stop"
             )}}
 
 
             <!-- Sailor Rave, K-Pop Edition, 02/03/23 -->
             {{ _partials.link(
-                "PHOTO",
+                "📸 PHOTOS",
                 "Sailor Rave: K-Pop Edition",
                 "Elbo Room, Oakland, CA",
                 "February 3, 2023",
-                "https://www.facebook.com/media/set/?set=a.168268832636052&type=3",
-                "images/yoi_toki_sf_2.jpg"
+                "https://drive.google.com/drive/u/0/folders/160izgR_D9CXJnzzrNkf58bSKtFX8TYPZ",
+                "images/sailor_rave_kpop.jpg",
+                "A nightclub photo of a full crowd at the Elbo Room"
             )}}
 
-            <a href="https://www.facebook.com/media/set/?set=a.168268832636052&type=3" target="_blank"
-                rel="noopener noreferrer"
-                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
-                style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/yoi_toki_sf_2.jpg') }}"
-                    alt="A group of cool people in light-up shutter glasses on stage at Yoi Toki San Francisco ">
-                <div class="col-8">
-                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: Sailor Rave: K-Pop
-                        Edition</span>
-                    <br>Elbo Room, Oakland, CA
-                    <br>February 3, 2023
-                </div>
-            </a>
-
             <!-- Yoi Toki SF Photos, 10/15/22 -->
-            <a href="https://www.facebook.com/media/set?vanity=YoiTokiEvents&set=a.135359642593638" target="_blank"
-                rel="noopener noreferrer"
-                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
-                style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/yoi_toki_sf.jpg') }}"
-                    alt="A group of cool people in light-up shutter glasses on stage at Yoi Toki San Francisco ">
-                <div class="col-8">
-                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: Yoi Toki</span>
-                    <br>Rickshaw Stop, San Francisco, CA
-                    <br>October 15, 2022
-                </div>
-            </a>
+            {{ _partials.link(
+                "📸 PHOTOS",
+                "Yoi Toki",
+                "Rickshaw Stop, San Francisco, CA",
+                "October 15, 2022",
+                "https://www.facebook.com/media/set?vanity=YoiTokiEvents&set=a.135359642593638",
+                "images/yoi_toki_sf.jpg",
+                "A nightclub portrait of a group of cool people in light-up shutter glasses on stage at Yoi Toki San Francisco"
+            )}}
 
             <!-- Vaporspace Invaders Photos -->
-            <a href="https://drive.google.com/drive/folders/1-m_YInfIPL2Qf9LaimCmXEHibRIjiiQL?usp=sharing"
-                target="_blank" rel="noopener noreferrer"
-                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
-                style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/eye_click.jpg') }}"
-                    alt="Eye Click meme photo from VaporSpace: Invaders in Brooklyn, New York">
-                <div class="col-8">
-                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: Vaporspace:
-                        Invaders</span>
-                    <br>Purgatory, Brooklyn, NY
-                    <br>August 21, 2022
-                </div>
-            </a>
+            {{ _partials.link(
+                "📸 PHOTOS",
+                "Vaporspace: Invaders",
+                "Purgatory, Brooklyn, NY",
+                "August 21, 2022",
+                "https://drive.google.com/drive/folders/1-m_YInfIPL2Qf9LaimCmXEHibRIjiiQL?usp=sharing",
+                "images/eye_click.jpg",
+                "A meme portrait of Enraile seemingly yelling at Will Wade of 👁‍🗨📲 on stage at Purgatory"
+            )}}
 
             <!-- Electronicon 3 Photos -->
-            <a href="https://drive.google.com/drive/folders/1-lHjLmP40JVtU8vdkQnN7d80i2R34n52?usp=sharing"
-                target="_blank" rel="noopener noreferrer"
-                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
-                style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/marble.jpg') }}"
-                    alt="Reflective marble ballon floating over crowd at FM Skyline's set at ElectroniCON 3">
-                <div class="col-8">
-                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: ElectroniCON 3</span>
-                    <br>Knockout Center, Queens, NY
-                    <br>August 20, 2022
-                </div>
-            </a>
+            {{ _partials.link(
+                "📸 PHOTOS",
+                "ElectroniCON 3",
+                "Knockout Center, Queens, NY",
+                "August 20, 2022",
+                "https://drive.google.com/drive/folders/1-lHjLmP40JVtU8vdkQnN7d80i2R34n52?usp=sharing",
+                "images/electronicon_3.jpg",
+                "A wide-angle portrait of a crew of people from Rosewood, preparing for Electronicon 3"
+            )}}
+
 
             <!-- Tape Swap 3 Photos -->
-            <a href="https://drive.google.com/drive/folders/1vpsq59xKug4Q4kayVhlK3FHJN4Oz7_WF?usp=sharing"
-                target="_blank" rel="noopener noreferrer"
-                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
-                style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/george_and_indy.jpg') }}"
-                    alt="George Clanton and Indy Advant posing for a photo at the Vaporwave Tape Swap 3">
-                <div class="col-8">
-                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: Vaporwave Tape Swap
-                        3</span>
-                    <br>The Living Gallery, Brooklyn, NY
-                    <br>August 19, 2022
-                </div>
-            </a>
+            {{ _partials.link(
+                "📸 PHOTOS",
+                "Vaporwave Tape Swap 3",
+                "The Living Gallery, Brooklyn, NY",
+                "August 19, 2022",
+                "https://drive.google.com/drive/folders/1vpsq59xKug4Q4kayVhlK3FHJN4Oz7_WF?usp=sharing",
+                "images/george_and_indy.jpg",
+                "A portrait of George Clanton and Indy Advant outside of the Living Gallery in Brooklyn"
+            )}}
 
         </div>
     </div>

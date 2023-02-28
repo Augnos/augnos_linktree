@@ -1,0 +1,13 @@
+{% macro link(type, title, location, date, link, thumbnail, alt_text) %}
+<a href="{{ link }}" target="_blank" rel="noopener noreferrer"
+    class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
+    style="--bs-bg-opacity: .65;">
+    <img class="img-fluid col-4" src={{ url_for('static', filename=thumbnail) }} alt="{{ alt_text }}">
+    <div class="col-8">
+        <span class="fw-light"><span class="text-vaporwave fw-normal">{{ type }}</span>: {{ title }}</span>
+        <br>{{ location }}
+        <br>{{ date }}
+    </div>
+
+</a>
+{% endmacro %}
