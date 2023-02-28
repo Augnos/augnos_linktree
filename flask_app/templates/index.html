@@ -1,3 +1,5 @@
+{% import "_partials.html" as _partials %}
+
 <!doctype html>
 <html lang="en">
 
@@ -5,31 +7,38 @@
     <!-- Primary Meta Tags -->
     <title>Photography. Music. Vaporwave.</title>
     <meta name="title" content="Photography. Music. Vaporwave.">
-    <meta name="description" content="Shared photo albums, SF Bay Area music events, and other vaporwave related links from Augnos.">
+    <meta name="description"
+        content="Shared photo albums, SF Bay Area music events, and other vaporwave related links from Augnos.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://go.augnos.com/">
     <meta property="og:title" content="Photography. Music. Vaporwave.">
-    <meta property="og:description" content="Shared photo albums, SF Bay Area music events, and other vaporwave related links from Augnos.">
+    <meta property="og:description"
+        content="Shared photo albums, SF Bay Area music events, and other vaporwave related links from Augnos.">
     <meta property="og:image" content="{{ url_for('static', filename='images/go_augnos_com.jpg') }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://go.augnos.com/">
     <meta property="twitter:title" content="Photography. Music. Vaporwave.">
-    <meta property="twitter:description" content="Shared photo albums, SF Bay Area music events, and other vaporwave related links from Augnos.">
+    <meta property="twitter:description"
+        content="Shared photo albums, SF Bay Area music events, and other vaporwave related links from Augnos.">
     <meta property="twitter:image" content="{{ url_for('static', filename='images/go_augnos_com.jpg') }}">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <style>
@@ -62,41 +71,113 @@
 
 <body class="text-light">
     <div class="container-fluid pt-3">
-        <div class="col-xl-4 col-lg-7 col-md-8 col-10 mx-auto">
+        <div class="col-xxl-4 col-xl-6 col-lg-7 col-md-8 col-sm-10 col-11 mx-auto">
 
             <!-- Header -->
             <div class="row mx-auto">
                 <h1 class="text-center text-white fw-lighter">Augnos</h1>
-                <p id="subtitle" class="text-center font-monospace">Photography. Music. <span class="text-vaporwave">Vaporwave</span>.</p>
+                <p id="subtitle" class="text-center font-monospace">Photography. Music. <span
+                        class="text-vaporwave">Vaporwave</span>.</p>
             </div>
 
             <!-- Social Icons -->
             <div class="row justify-content-around">
                 <a href="https://twitter.com/augnosmusic" target="_blank" rel="noopener noreferrer" class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/twitter.png') }}" alt="twitter.com/augnosmusic">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/twitter.png') }}"
+                        alt="twitter.com/augnosmusic">
                 </a>
                 <a href="https://instagram.com/augnosmusic" target="_blank" rel="noopener noreferrer"
                     class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/ig.png') }}" alt="instagram.com/augnosmusic">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/ig.png') }}"
+                        alt="instagram.com/augnosmusic">
                 </a>
                 <a href="https://augnos.bandcamp.com" target="_blank" rel="noopener noreferrer" class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/bandcamp.png') }}" alt="augnos.bandcamp.com">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/bandcamp.png') }}"
+                        alt="augnos.bandcamp.com">
                 </a>
                 <a href="https://linkedin.com/in/augnos" target="_blank" rel="noopener noreferrer" class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/linkedin.png') }}" alt="linkedin.com/in/augnos">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/linkedin.png') }}"
+                        alt="linkedin.com/in/augnos">
                 </a>
                 <a href="https://github.com/augnos" target="_blank" rel="noopener noreferrer" class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/github.png') }}" alt="github.com/augnos">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/github.png') }}"
+                        alt="github.com/augnos">
                 </a>
             </div>
 
-            <!-- Yoi Toki SF Photos -->
-            <a href="https://www.facebook.com/media/set?vanity=YoiTokiEvents&set=a.135359642593638"
-                target="_blank" rel="noopener noreferrer"
+
+            <!-- *********************** -->
+            <!-- ********* Links ******* -->
+            <!-- vvvvvvvvvvvvvvvvvvvvvvv -->
+
+            <!-- Template for link component
+                {{ _partials.link(
+                    "Type e.g PHOTO",
+                    "Title",
+                    "Venue, City, State",
+                    "Month DD, YYYY",
+                    "link URL",
+                    "thumbnail URL"
+                )}} 
+            -->
+
+            <!-- FrankJavCee Birthday, 02/24/23 -->
+            {{ _partials.link(
+                "PHOTO",
+                "FrankJavCee's Birthday Party",
+                "VAlley Relics Museum, VAn Nuys, CA",
+                "February 24, 2023",
+                "https://www.facebook.com/media/set/?set=a.168268832636052&type=3",
+                "images/yoi_toki_sf_2.jpg"
+            )}}
+
+            <!-- Yoi Toki SF Photos, 02/11/23 -->
+            {{ _partials.link(
+                "PHOTO",
+                "Yoi Toki",
+                "San Francisco, CA",
+                "February 11, 2023",
+                "https://www.facebook.com/media/set/?set=a.168268832636052&type=3",
+                "images/yoi_toki_sf_2.jpg"
+            )}}
+
+
+            <!-- Sailor Rave, K-Pop Edition, 02/03/23 -->
+            {{ _partials.link(
+                "PHOTO",
+                "Sailor Rave: K-Pop Edition",
+                "Elbo Room, Oakland, CA",
+                "February 3, 2023",
+                "https://www.facebook.com/media/set/?set=a.168268832636052&type=3",
+                "images/yoi_toki_sf_2.jpg"
+            )}}
+
+            <a href="https://www.facebook.com/media/set/?set=a.168268832636052&type=3" target="_blank"
+                rel="noopener noreferrer"
                 class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
                 style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/yoi_toki_sf.jpg') }}" alt="A group of cool people in light-up shutter glasses on stage at Yoi Toki San Francisco ">
-                <div class="col-9"><span class="text-vaporwave fw-bold">PHOTOS</span>: Yoi Toki SF, Oct 15, 2022</div>
+                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/yoi_toki_sf_2.jpg') }}"
+                    alt="A group of cool people in light-up shutter glasses on stage at Yoi Toki San Francisco ">
+                <div class="col-8">
+                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: Sailor Rave: K-Pop
+                        Edition</span>
+                    <br>Elbo Room, Oakland, CA
+                    <br>February 3, 2023
+                </div>
+            </a>
+
+            <!-- Yoi Toki SF Photos, 10/15/22 -->
+            <a href="https://www.facebook.com/media/set?vanity=YoiTokiEvents&set=a.135359642593638" target="_blank"
+                rel="noopener noreferrer"
+                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
+                style="--bs-bg-opacity: .65;">
+                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/yoi_toki_sf.jpg') }}"
+                    alt="A group of cool people in light-up shutter glasses on stage at Yoi Toki San Francisco ">
+                <div class="col-8">
+                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: Yoi Toki</span>
+                    <br>Rickshaw Stop, San Francisco, CA
+                    <br>October 15, 2022
+                </div>
             </a>
 
             <!-- Vaporspace Invaders Photos -->
@@ -104,8 +185,14 @@
                 target="_blank" rel="noopener noreferrer"
                 class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
                 style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/eye_click.jpg') }}" alt="Eye Click meme photo from VaporSpace: Invaders in Brooklyn, New York">
-                <div class="col-9"><span class="text-vaporwave fw-bold">PHOTOS</span>: VaporSpace: Invaders, Aug 21, 2022</div>
+                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/eye_click.jpg') }}"
+                    alt="Eye Click meme photo from VaporSpace: Invaders in Brooklyn, New York">
+                <div class="col-8">
+                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: Vaporspace:
+                        Invaders</span>
+                    <br>Purgatory, Brooklyn, NY
+                    <br>August 21, 2022
+                </div>
             </a>
 
             <!-- Electronicon 3 Photos -->
@@ -113,8 +200,13 @@
                 target="_blank" rel="noopener noreferrer"
                 class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
                 style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/marble.jpg') }}" alt="Reflective marble ballon floating over crowd at FM Skyline's set at ElectroniCON 3">
-                <div class="col-9"><span class="text-vaporwave fw-bold">PHOTOS</span>: ElectroniCON 3, Aug 20, 2022</div>
+                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/marble.jpg') }}"
+                    alt="Reflective marble ballon floating over crowd at FM Skyline's set at ElectroniCON 3">
+                <div class="col-8">
+                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: ElectroniCON 3</span>
+                    <br>Knockout Center, Queens, NY
+                    <br>August 20, 2022
+                </div>
             </a>
 
             <!-- Tape Swap 3 Photos -->
@@ -122,15 +214,18 @@
                 target="_blank" rel="noopener noreferrer"
                 class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
                 style="--bs-bg-opacity: .65;">
-                <img class="img-fluid col-3" src="{{ url_for('static', filename='images/george_and_indy.jpg') }}" alt="George Clanton and Indy Advant posing for a photo at the Vaporwave Tape Swap 3">
-                <div class="col-9"><span class="text-vaporwave fw-bold">PHOTOS</span>: Vaporwave Tape Swap 3, Aug 19, 2022</div>
+                <img class="img-fluid col-4" src="{{ url_for('static', filename='images/george_and_indy.jpg') }}"
+                    alt="George Clanton and Indy Advant posing for a photo at the Vaporwave Tape Swap 3">
+                <div class="col-8">
+                    <span class="fw-light"><span class="text-vaporwave fw-normal">PHOTOS</span>: Vaporwave Tape Swap
+                        3</span>
+                    <br>The Living Gallery, Brooklyn, NY
+                    <br>August 19, 2022
+                </div>
             </a>
 
         </div>
     </div>
-
-
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
