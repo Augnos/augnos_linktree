@@ -4,7 +4,7 @@
     style="--bs-bg-opacity: .65;">
     <img class="img-fluid col-4" src={{ url_for('static', filename=thumbnail) }} alt="{{ alt_text }}">
     <div class="col-8">
-        <span class="fw-light"><span class="text-vaporwave fw-normal">{{ type }}</span>: {{ title }}</span>
+        <span class="fw-light"><span class="text-vaporwave fw-normal font-monospace">{{ type }}</span>{{ title }}</span>
         <br>{{ location }}
         <br>{{ date }}
     </div>

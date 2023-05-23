@@ -41,6 +41,7 @@
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
+<!-- Some additional styling b/c I didn't want to add a full css file while using bootstrap -->
 <style>
     body {
         background-image: url("{{ url_for('static', filename='images/background.jpg') }}");
@@ -56,8 +57,10 @@
         color: #cccccc;
     }
 
-    .text-vaporwave {
-        color: #ff71ce
+    /* If you want more precise text colors,
+        copy and change the hex code of this */
+    .text-vaporwave {       /* class name */
+        color: #ff71ce    /* hexcode color */
     }
 
     .container>.row {
@@ -76,53 +79,36 @@
             <!-- Header -->
             <div class="row mx-auto">
                 <h1 class="text-center text-white fw-lighter">Augnos</h1>
-                <p id="subtitle" class="text-center font-monospace">Photography. Music. <span
+                <p id="subtitle" class="text-center font-monospace">Music. Photography. <span
                         class="text-vaporwave">Vaporwave</span>.</p>
             </div>
 
             <!-- Social Icons -->
             <div class="row justify-content-around">
-                <a href="https://twitter.com/augnosmusic" target="_blank" rel="noopener noreferrer" class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/twitter.png') }}"
+                <a href="https://twitter.com/augnosmusic" target="_blank" rel="noopener noreferrer" class="icon col">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/twitter.svg') }}"
                         alt="twitter.com/augnosmusic">
                 </a>
                 <a href="https://instagram.com/augnosmusic" target="_blank" rel="noopener noreferrer"
-                    class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/ig.png') }}"
+                    class="icon col">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/instagram.svg') }}"
                         alt="instagram.com/augnosmusic">
                 </a>
-                <a href="https://augnos.bandcamp.com" target="_blank" rel="noopener noreferrer" class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/bandcamp.png') }}"
+                <a href="https://youtube.com/augnos" target="_blank" rel="noopener noreferrer" class="icon col">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/youtube.svg') }}"
+                        alt="youtube.com/augnos">
+                </a>
+                <a href="https://augnos.bandcamp.com" target="_blank" rel="noopener noreferrer" class="icon col">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/bandcamp.svg') }}"
                         alt="augnos.bandcamp.com">
                 </a>
-                <a href="https://linkedin.com/in/augnos" target="_blank" rel="noopener noreferrer" class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/linkedin.png') }}"
-                        alt="linkedin.com/in/augnos">
-                </a>
-                <a href="https://github.com/augnos" target="_blank" rel="noopener noreferrer" class="icon col-2">
-                    <img class="img-fluid" src="{{ url_for('static', filename='icons/github.png') }}"
+                <a href="https://github.com/augnos" target="_blank" rel="noopener noreferrer" class="icon col">
+                    <img class="img-fluid" src="{{ url_for('static', filename='icons/github.svg') }}"
                         alt="github.com/augnos">
                 </a>
             </div>
 
-            <!-- Portfolio Links -->
-            <a href="https://augnos.com" target="_blank" rel="noopener noreferrer"
-                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
-                style="--bs-bg-opacity: .65;">
-                <div class="col-12 text-center">
-                    <span class="fw-light"><span class="text-vaporwave fw-normal">🌉 EVENT PHOTOGRAPHY PORTFOLIO</span></span>
-                </div>
-            </a>
-            <a href="https://augnos.dev" target="_blank" rel="noopener noreferrer"
-                class="link row mx-auto py-3 mt-3 bg-dark border border-white border-opacity-75 rounded-5 rounded-start justify-content-between text-light fw-lighter text-decoration-none align-items-center"
-                style="--bs-bg-opacity: .65;">
-                <div class="col-12 text-center">
-                    <span class="fw-light"><span class="text-vaporwave fw-normal">💻 DEVELOPER PORTFOLIO</span></span>
-                </div>
-            </a>
-
-
-            <!-- Other Links -->
+            <!-- All links located in _links.html-->
             {{ links }}
 
         </div>
